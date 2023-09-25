@@ -21,11 +21,11 @@ url: https://github.com/Itslucassantos/root_developers
 https://itslucassantos.github.io/root_developers/
 ```
 #### URL PARA PROPOSTA DE LAYOUT NO FIGMA #3
+
+##### Obs: Tem um arquivo chamado Projeto.pdf em docs que é o layout do figma, caso queira olhar o layout por lá!
+
+##### Obs: Nessa url abaixo tem as páginas previstas no Design e as âncoras ligando todas as páginas:
 ```bash
-Obs: Tem um arquivo chamado Projeto.pdf em docs que é o layout do figma, caso queira olhar o layout por lá!
-
-Obs: Nessa url abaixo tem as páginas previstas no Design e as âncoras ligando todas as páginas:
-
 https://www.figma.com/proto/6H5dqOs4FyHQLC73dWDEou/Projeto?node-id=13-25
 ```
 
