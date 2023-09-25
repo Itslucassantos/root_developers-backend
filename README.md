@@ -7,7 +7,7 @@
 2. Nome: Lucas Ferreira dos Santos | RA: 202203560816
 ---
 ### TEMA DO PROJETO: Cálculo de Imposto de Renda
-DESCIRÇÃO: Esse projeto consiste na construção de uma API onde será possível cadastrar o funcionário com seus 
+DESCRIÇÃO: Esse projeto consiste na construção de uma API onde será possível cadastrar o funcionário com seus 
 respectivos atributos e calcular o imposto de renda.
 ---
 ### URLS DO PROJETO:
