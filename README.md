@@ -5,6 +5,7 @@
 ### INTEGRANTES: 
 1. Nome: Jonathan Carvalho | RA: 202208716891
 2. Nome: Lucas Ferreira dos Santos | RA: 202203560816
+3. Nome: Vinicius Debroi | RA: 202212115927
 ---
 ### TEMA DO PROJETO: Cálculo de Imposto de Renda
 DESCRIÇÃO: Esse projeto consiste na construção de uma API onde será possível cadastrar o funcionário com seus 
@@ -14,7 +15,7 @@ respectivos atributos e calcular o imposto de renda.
 
 #### URL DO REPOSITÓRIO GITHUB #1
 ```bash
-url: https://github.com/Itslucassantos/root_developers
+https://github.com/Itslucassantos/root_developers
 ```
 #### URL DO SITE PUBLICADO #2
 ```bash
@@ -26,6 +27,6 @@ https://itslucassantos.github.io/root_developers/
 
 ##### Obs: Nessa url abaixo tem as páginas previstas no Design e as âncoras ligando todas as páginas:
 ```bash
-https://www.figma.com/proto/6H5dqOs4FyHQLC73dWDEou/Projeto?node-id=13-25
+https://www.figma.com/file/6H5dqOs4FyHQLC73dWDEou/Projeto?type=design&node-id=0%3A1&mode=design&t=ZrLX1WIVUqQ5vO1J-1
 ```
 
