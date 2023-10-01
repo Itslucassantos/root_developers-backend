@@ -3,17 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto</title>
+    <title>rootDev: entre ou cadastre-se</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<h1>Definição do Projeto</h1>
-<h2>Tema: Cálculo de Imposto de Renda </h2>
-<p>Esse projeto consiste na construção de uma API onde será possível cadastrar o funcionário com seus respectivos
-    atributos e calcular o imposto de renda. </p>
-<p></p>
-<h2>Curso: Ciência da Computação | Unimetrocamp Wyden</h2>
-<p><strong>Nome</strong>: Jonathan Carvalho | <strong>RA</strong>: 202208716891</p>
-<p><strong>Nome</strong>: Lucas Ferreira dos Santos | <strong>RA</strong>: 202203560816</p>
+    <nav class="menu">
+        <div class="nav-logo">
+            <div class="logo">
+                <a href="index.html">root<span class="dev">Dev</span></a>
+            </div>
 
+            <div class="nav-sobre">
+                <a href="#sobre">Sobre</a>
+                <a href="#quem-somos">Quem nós somos</a>
+            </div>
+
+            <div class="nav-botao">
+                <button class="botao-cadastro"><a href="cadastro.html">Cadastre-se agora</a></button>
+                <button class="botao-entrar"><a href="login.html">Entrar</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form">
+            <div class="form-global">
+                <form class="entrar-form">
+                    <div class="form-entrar">
+                        <h1 class="titulo-header">Conheça nosso simulador de imposto de renda</h1>
+                    </div>
+
+                    <div class="input-group">
+
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input class="form-input" type="email" name="email" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="senha">Senha</label>
+                            <input class="form-input" type="password" name="senha" required>
+                        </div>
+
+                        <div class="esquecer">
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        
+                        <div class="botao-entrar2">
+                            <button class="entrar"><a href="simulador.html">Entrar</a></button>
+                            <p class="paragrafo">ou</p>
+                        </div>
+
+                        <div class="botao-google">
+                            <button class="google">Continue com Google</button>
+                        </div>
+
+                        <div class="botao-cadastrar">
+                            <button class="b-cadastro"><a href="cadastro.html">Cadastre-se agora</a></button>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="entrar-form form-image">
+                    <img src="imagens/undraw_team_work_k-80-m.svg" alt="teamwork">
+                    <img src="imagens/undraw_finance_re_gnv2.svg" alt="finance">
+                </form>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="about">
+                <article class="sobre-part">
+                    <h1>Bem vindo ao rootDev.</h1>
+                    <h2>Sobre o rootDev</h2>
+                    <p>Temos como objetivo disponibilizar de maneira gratuita o serviço de simulação de imposto de renda, visando facilitar para pessoas que tem dificuldades para fazer os cálculos e também agilizar o processo</p>
+                    <p>Faça seu cadastro de maneira gratuita, clicando no botão a baixo</p>
+                    <button class="botao-article"><a href="cadastro.html">Cadastre-se</a></button>
+                </article>
+
+                <article class="sobre-part sobre-image">
+                    <img src="imagens/undraw_nakamoto_-2-iv6.svg" alt="plataforma">
+                </article>
+            </div>
+        </section>
+
+        <section class="quem" id="quem-somos">
+            <div class="somos">
+                <article class="quem-somos">
+                    <div class="who-container">
+                        <div class="who-form">
+                            <div class="form-who">
+                                <div class="card-image">
+                                    <img src="imagens/Jonathan.jpeg" alt="Foto_Perfil_Jonathan" class="card-img">
+                                </div>
+                            </div>
+                            <div class="form-whu">
+                                <h1 class="titulo-who">Jonathan Carvalho</h1>
+                                <h3 class="apresentacao">Olá, visitante!</h3>
+                                <p class="resumo">Me chamo Jonathan Carvalho, estudo Ciência da Computação na Unimetrocamp e fiquei responspável nesse projeto em desenvolvedor o Front-End utilizando as Linguagens HTML e CSS. Espero que tenha gostado, caso queira saber mais informações a meu respeito clique no botão abaixo</p>
+                                <p class="resumo">RA: 202208716891</p>
+                                <ul class="links">
+                                    <li><img src="imagens/icone-github.png" alt="github"><a href="https://github.com/Itslucassantos/root_developers" target="_blank">Github do Projeto</a></li>
+                                    <li><img src="imagens/icone-linkedin.png" alt="Linkedin" class="img-link"><a href="https://www.linkedin.com/in/jonathandcarvalhoti/" target="_blank">Linkedin</a></li>
+                                </ul>
+                                <button class="botao-who"><a href="#">Saiba Mais</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="quem-somos">
+                    <div class="who-container">
+                        <div class="who-form">
+                            <div class="form-who">
+                                <div class="card-image">
+                                    <img src="imagens/Lucas.jpg" alt="Foto_Perfil_Jonathan" class="card-img">
+                                </div>
+                            </div>
+                            <div class="form-whu">
+                                <h1 class="titulo-who">Lucas Santos</h1>
+                                <h3 class="apresentacao">Olá, visitante!</h3>
+                                <p class="resumo">Me chamo Lucas Santos, estudo Ciência da Computação na Unimetrocamp e fiquei responspável nesse projeto em desenvolvedor parte Back-End utilizando a Linguagem Java e também criação do banco de dados utilizando o MySQL. Espero que tenha gostado, caso queira saber mais informações a meu respeito clique no botão abaixo</p>
+                                <p class="resumo">RA: 202203560816</p>
+                                <ul class="links">
+                                    <li><img src="imagens/icone-github.png" alt="github"><a href="https://github.com/Itslucassantos/root_developers" target="_blank">Github do Projeto</a></li>
+                                    <li><img src="imagens/icone-linkedin.png" alt="Linkedin" class="img-link"><a href="https://www.linkedin.com/in/lucas-santos-729047236/" target="_blank">Linkedin</a></li>
+                                </ul>
+                                <button class="botao-who"><a href="#">Saiba Mais</a></button>
+                            </div>
+                    </div>
+                </article>
+
+                <article class="quem-somos">
+                    <div class="who-container">
+                        <div class="who-form">
+                            <div class="form-who">
+                                <div class="card-image">
+                                    <img src="imagens/Vinicius.jpg" alt="Foto_Perfil_Jonathan" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="form-whu">
+                                <h1 class="titulo-who">Vinicius Debroi</h1>
+                                <h3 class="apresentacao">Olá, visitante!</h3>
+                                <p class="resumo">Me chamo Vinicius Debroi, estudo Sistemas da Informação na Unimetrocamp e fiquei responspável nesse projeto em desenvolvedor parte do Back-End utilizando a Linguagem JavaScript. Espero que tenha gostado, caso queira saber mais informações a meu respeito clique no botão abaixo</p>
+                                <p class="resumo">RA: 202212115927</p>
+                                <ul class="links">
+                                    <li><img src="imagens/icone-github.png" alt="github"><a href="https://github.com/Itslucassantos/root_developers" target="_blank">Github do Projeto</a></li>
+                                    <li><img src="imagens/icone-linkedin.png" alt="Linkedin" class="img-link"><a href="https://www.linkedin.com/in/vinicius-debroi-0739a2180/" target="_blank">Linkedin</a></li>
+                                </ul>
+                                <button id="botao-who" class="botao-who"><a href="#">Saiba Mais</a></button>
+                            </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
