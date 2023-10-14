@@ -1,6 +1,7 @@
 package com.root_developers.calculador.models;
 
 import com.root_developers.calculador.dtos.ClientDataDto;
+import com.root_developers.calculador.dtos.ClientUpdateDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,28 +32,28 @@ public class LegalClientModel {
     private String cnpj;
 
     @Column(name = "first_name", length = 100, nullable = false)
-    protected String firstName;
+    private String firstName;
 
     @Column(name = "surname", length = 150, nullable = false)
-    protected String surname;
+    private String surname;
 
     @Column(name = "email", nullable = false, unique = true, length = 150)
-    protected String email;
+    private String email;
 
     @Column(name = "confirm_email", nullable = false, unique = true, length = 150)
-    protected String confirmEmail;
+    private String confirmEmail;
 
     @Column(name = "cpf", nullable = false, unique = true, length = 11)
-    protected String cpf;
+    private String cpf;
 
     @Column(name = "phone_number", length = 20)
-    protected String phoneNumber;
+    private String phoneNumber;
 
     @Column(name = "password", nullable = false, length = 255)
-    protected String password;
+    private String password;
 
     @Column(name = "confirm_password", nullable = false, length = 255)
-    protected String confirmPassword;
+    private String confirmPassword;
 
     @OneToOne @JoinColumn(name = "address_id")
     private AddressModel address;
@@ -62,4 +63,8 @@ public class LegalClientModel {
         this.address = addressModel;
     }
 
+    public void update(ClientUpdateDto clientUpdateDto, AddressModel addressModel) {
+        BeanUtils.copyProperties(clientUpdateDto, this);
+        this.address = addressModel;
+    }
 }

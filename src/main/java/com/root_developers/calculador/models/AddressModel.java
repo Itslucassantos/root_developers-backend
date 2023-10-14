@@ -49,4 +49,8 @@ public class AddressModel implements Serializable {
         BeanUtils.copyProperties(address, this);
     }
 
+    public void update(AddressModel address) {
+        BeanUtils.copyProperties(address, this);
+    }
+
 }

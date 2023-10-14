@@ -37,44 +37,48 @@ public class ClientDataDto {
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String firstName;
+    private String firstName;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String surname;
-
-    @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    @Email
-    protected String email;
+    private String surname;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @Email
-    protected String confirmEmail;
+    private String email;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String cpf;
+    @Email
+    private String confirmEmail;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String phoneNumber;
+    private String cpf;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String password;
+    private String phoneNumber;
 
     @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
-    protected String confirmPassword;
+    private String password;
+
+    @NotBlank(groups = {ClientView.LegalClient.class, ClientView.PhysicalClient.class})
+    @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
+    private String confirmPassword;
 
     @JsonView({ClientView.LegalClient.class, ClientView.PhysicalClient.class})
     private AddressModel address;
 
     public ClientDataDto(LegalClientModel legalClientModel) {
         BeanUtils.copyProperties(legalClientModel, this);
+        this.id = legalClientModel.getLegalClientId();
     }
-    public ClientDataDto(PhysicalClientModel physicalClientModel) {BeanUtils.copyProperties(physicalClientModel, this);}
+    public ClientDataDto(PhysicalClientModel physicalClientModel) {
+        BeanUtils.copyProperties(physicalClientModel, this);
+        this.id = physicalClientModel.getPhysicalClientId();
+    }
 
 }
