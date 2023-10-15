@@ -13,4 +13,6 @@ public interface ClientService {
     void delete(UUID clientId);
 
     ClientUpdateDto update(ClientUpdateDto clientUpdateDto);
+
+    ClientDataDto getOneClient(UUID clientId);
 }

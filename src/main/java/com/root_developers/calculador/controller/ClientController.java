@@ -52,5 +52,11 @@ public class ClientController {
         return ResponseEntity.status(HttpStatus.OK).body(this.clientService.update(clientUpdateDto));
     }
 
+    @GetMapping("/{clientId}")
+    @Transactional
+    public ResponseEntity getOneClient(@PathVariable(value = "clientId") UUID clientId) {
+        return ResponseEntity.status(HttpStatus.OK).body(this.clientService.getOneClient(clientId));
+    }
+
 
 }

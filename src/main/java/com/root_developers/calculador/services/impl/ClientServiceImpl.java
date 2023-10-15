@@ -102,5 +102,20 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
+    @Override
+    public ClientDataDto getOneClient(UUID clientId) {
+        Optional<LegalClientModel> legalClientModelOptional = this.legalClientRepository.findById(clientId);
+        if(legalClientModelOptional.isPresent()) {
+            return new ClientDataDto(legalClientModelOptional.get());
+        } else {
+            Optional<PhysicalClientModel> physicalClientModelOptional = this.physicalClientRepository.findById(clientId);
+            if (physicalClientModelOptional.isPresent()) {
+                return new ClientDataDto(physicalClientModelOptional.get());
+            } else {
+                throw new ClientException(" Cliente não encontrado! ");
+            }
+        }
+    }
+
 
 }
