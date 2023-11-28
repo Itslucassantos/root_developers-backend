@@ -10,6 +10,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.Serial;
 import java.util.Collection;
@@ -65,6 +67,8 @@ public class LegalClientModel implements UserDetails, IClientModel {
 
     public LegalClientModel(ClientDataDto clientDataDto, AddressModel addressModel) {
         BeanUtils.copyProperties(clientDataDto, this);
+        this.password = new BCryptPasswordEncoder().encode(clientDataDto.getPassword().trim());
+        this.confirmPassword = this.password;
         this.address = addressModel;
     }
 
