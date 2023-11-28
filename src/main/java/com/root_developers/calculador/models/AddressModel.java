@@ -39,7 +39,7 @@ public class AddressModel implements Serializable {
     @Column(name = "number", length = 50, nullable = false)
     private String number;
 
-    @Column(name = "zip_code", length = 8, nullable = false)
+    @Column(name = "zip_code", length = 9, nullable = false)
     private String zipCode;
 
     @Column(name = "complement", nullable = true, length = 150)

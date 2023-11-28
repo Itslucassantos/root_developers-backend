@@ -3,6 +3,14 @@ server:
   port: 8081
   servlet:
     contextPath: /api
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+  org.springframework.security.web.csrf.CsrfFilter: DEBUG
+
 spring:
   datasource:
     url: 'jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:calculador}'
