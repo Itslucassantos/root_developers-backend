@@ -40,7 +40,7 @@ public class AddressModel implements Serializable {
     private String number;
 
     @Column(name = "zip_code", length = 8, nullable = false)
-    private int zipCode;
+    private String zipCode;
 
     @Column(name = "complement", nullable = true, length = 150)
     private String complement;

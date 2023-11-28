@@ -29,5 +29,4 @@ public class IncomeTaxController {
         return ResponseEntity.status(HttpStatus.OK).body(this.incomeTaxService.calculate(incomeTaxDto));
     }
 
-
 }
