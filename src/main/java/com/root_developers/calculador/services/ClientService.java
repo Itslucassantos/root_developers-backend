@@ -14,5 +14,5 @@ public interface ClientService {
 
     ClientUpdateDto update(ClientUpdateDto clientUpdateDto);
 
-    ClientDataDto getOneClient(UUID clientId);
+    ClientDataDto getOneClient(String email);
 }

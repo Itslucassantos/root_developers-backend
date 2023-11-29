@@ -103,12 +103,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientDataDto getOneClient(UUID clientId) {
-        Optional<LegalClientModel> legalClientModelOptional = this.legalClientRepository.findById(clientId);
+    public ClientDataDto getOneClient(String email) {
+        Optional<LegalClientModel> legalClientModelOptional = this.legalClientRepository.findByEmail(email);
         if(legalClientModelOptional.isPresent()) {
             return new ClientDataDto(legalClientModelOptional.get());
         } else {
-            Optional<PhysicalClientModel> physicalClientModelOptional = this.physicalClientRepository.findById(clientId);
+            Optional<PhysicalClientModel> physicalClientModelOptional = this.physicalClientRepository.findByEmail(email);
             if (physicalClientModelOptional.isPresent()) {
                 return new ClientDataDto(physicalClientModelOptional.get());
             } else {

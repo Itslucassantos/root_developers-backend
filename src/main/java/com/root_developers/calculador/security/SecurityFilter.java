@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -37,12 +38,16 @@ public class SecurityFilter extends OncePerRequestFilter {
             var subject = tokenService.getSubject(tokenJWT);
             //considere que essa pessoa está autenticada, eu garanto isso. Feito uma autenticação forçada para o Spring entender.
             //passa o subject, pq é onde está guardado o email do client.
+            UserDetails userDetails;
             var client = this.legalClientRepository.findByEmail(subject);
             if(client == null) {
-                client = this.physicalClientRepository.findByEmail(subject);
+                var physicalClientModel = this.physicalClientRepository.findByEmail(subject);
+                userDetails = physicalClientModel.get();
+            } else {
+                userDetails = client.get();
             }
             var authentication = new UsernamePasswordAuthenticationToken(client, null,
-                    client.getAuthorities());
+                    userDetails.getAuthorities());
             // força que o usuário está logado
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }

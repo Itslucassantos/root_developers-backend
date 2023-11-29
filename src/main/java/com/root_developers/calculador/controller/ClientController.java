@@ -52,10 +52,10 @@ public class ClientController {
         return ResponseEntity.status(HttpStatus.OK).body(this.clientService.update(clientUpdateDto));
     }
 
-    @GetMapping("/{clientId}")
+    @GetMapping("/{email}")
     @Transactional
-    public ResponseEntity getOneClient(@PathVariable(value = "clientId") UUID clientId) {
-        return ResponseEntity.status(HttpStatus.OK).body(this.clientService.getOneClient(clientId));
+    public ResponseEntity getOneClient(@PathVariable(value = "email") String email) {
+        return ResponseEntity.status(HttpStatus.OK).body(this.clientService.getOneClient(email));
     }
 
 

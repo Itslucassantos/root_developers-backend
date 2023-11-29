@@ -10,5 +10,8 @@ import java.util.UUID;
 public interface LegalClientRepository extends JpaRepository<LegalClientModel, UUID> {
     Optional<LegalClientModel> getReferenceByCnpj(String cnpj);
 
-    UserDetails findByEmail(String email);
+    Optional<LegalClientModel> findByEmail(String email);
+
+
+
 }

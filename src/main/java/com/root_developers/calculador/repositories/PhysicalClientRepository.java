@@ -10,5 +10,5 @@ import java.util.UUID;
 public interface PhysicalClientRepository extends JpaRepository<PhysicalClientModel, UUID> {
     Optional<PhysicalClientModel> getReferenceByCpf(String cpf);
 
-    UserDetails findByEmail(String email);
+    Optional<PhysicalClientModel> findByEmail(String email);
 }
