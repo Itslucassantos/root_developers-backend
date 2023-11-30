@@ -43,7 +43,7 @@ public class ClientController {
     @Transactional
     public ResponseEntity deleteClient(@PathVariable(value = "clientId") UUID clientId) {
         this.clientService.delete(clientId);
-        return ResponseEntity.status(HttpStatus.OK).body(" Cliente deletado com sucesso! ");
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping
