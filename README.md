@@ -9,3 +9,4 @@ Lucas Ferreira dos Santos
 DESCRIÇÃO: Esse projeto consiste na construção de uma API onde será possível cadastrar o funcionário com seus 
 respectivos atributos e calcular o imposto de renda.
 ---
+[Link do **Front-end** do projeto](https://github.com/Itslucassantos/root-developers-front-end)
