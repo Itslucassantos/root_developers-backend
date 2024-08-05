@@ -10,3 +10,14 @@ DESCRIÇÃO: Esse projeto consiste na construção de uma API onde será possív
 respectivos atributos e calcular o imposto de renda.
 ---
 [Link do **Front-end** do projeto](https://github.com/Itslucassantos/root-developers-front-end)
+
+---
+
+[Neste link você encontra o **vídeo** que demonstra o site funcionando](https://drive.google.com/file/d/1k2G2QC5DVB7X1xKWfSy5IKdYvLxS8-Mj/view?usp=sharing)
+
+---
+
+[Link do **meu Web Site**](https://portfolio-neon-eight-34.vercel.app/index.html)
+
+---
+#### OBS: Caso queira baixe o Front-end e o Backend e teste em sua máquina.
